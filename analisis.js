@@ -35,6 +35,6 @@ const salariosColTop10 = salariosColSorted.splice(
 const medianaTop10Col = calcMedianaSalarial(salariosColTop10); 
 
 console.log(
-    medianaSalarialCol
+    medianaSalarialCol,
     medianaTop10Col
 );
