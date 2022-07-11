@@ -30,5 +30,27 @@ function calcMediana(lista) {
     return parseFloat(mediana.toFixed(2));
 }
 
+let lista1 = [
+    1,2,3,1,2,3,4,2,2,2,1
+];
 
+function calcModa(lista) {
+    const conteoElementos = {};
+    lista.map(
+        function(elemento) {
+            if(conteoElementos[elemento]) {
+                conteoElementos[elemento] += 1;
+            } else {
+                conteoElementos[elemento] = 1;
+            }  
+        }
+    );
+    const lista1Array = Object.entries(conteoElementos).sort(
+        function (elementoA, elementoB) {
+            return elementoA[1] - elementoB[1];
+        }
+    );
+    const moda = lista1Array[lista1Array.length - 1][0];
+    return parseInt(moda);
+}
 
